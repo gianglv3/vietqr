@@ -76,8 +76,7 @@ public class VietQr {
         vietQRCode += "38" + String.format("%02d", dvcntt.length()) + dvcntt;
         vietQRCode += "530370454" + String.format("%02d", amount.length()) + amount + "5802VN";
         if (!TextUtils.isEmpty(description)) {
-            DmDevicePos dmDevicePos= App.getInstance().getDmDevicePos();
-            description=dmDevicePos.getStoreID()+" "+description;
+         
             String desc = "08" + String.format("%02d", description.length()) + description;
             vietQRCode += "62" + String.format("%02d", desc.length()) + desc;
         }
