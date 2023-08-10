@@ -91,3 +91,4 @@ public class VietQr {
         if (leng>10) return ""+leng;
         return "0"+leng;
     }
+}
