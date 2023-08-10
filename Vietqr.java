@@ -5,6 +5,7 @@
  */
 
 public class VietQr {
+    
     public static int crc16(final byte[] buffer) {
         int crc = 0xFFFF;
 
@@ -22,7 +23,7 @@ public class VietQr {
     private  static  String getCrc16Valid(String vietQRCode) {
         int crc =crc16(vietQRCode.getBytes());
         String crcCode = Integer.toHexString(crc);
-//
+        
         if (crcCode.length()==4){
             return crcCode;
         }
